@@ -21,8 +21,8 @@ def screen_message():
         fp.close()
 
     msg = MIMEMultipart()
-    msg['From'] = 'EMAIL_SANDLER'  # Адресат
-    msg['To'] = regist.address  # Получатель
+    msg['From'] = 'EMAIL_SANDLER'
+    msg['To'] = regist.address
     msg['Subject'] = dat
     msg.attach(file)
 
