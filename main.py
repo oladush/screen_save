@@ -21,7 +21,7 @@ def screen_message():
         fp.close()
 
     msg = MIMEMultipart()
-    msg['From'] = 'botscrenn@gmail.com'  # Адресат
+    msg['From'] = 'EMAIL_SANDLER'  # Адресат
     msg['To'] = regist.address  # Получатель
     msg['Subject'] = dat
     msg.attach(file)
@@ -29,7 +29,7 @@ def screen_message():
     try:
         smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
         smtpObj.starttls()
-        smtpObj.login('botscrenn@gmail.com', 'jTy9SMdrrubCQKs')
+        smtpObj.login('EMAIL_SANDLER', 'PASSWORD')
         smtpObj.send_message(msg)
         smtpObj.quit()
         print("ok")
