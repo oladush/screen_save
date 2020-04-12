@@ -7,13 +7,13 @@ def zapros(address):
     code = str(random.randint(1000, 9999))
     file = MIMEText(code)
     msg = MIMEMultipart()
-    msg['From'] = ''  # Адресат
-    msg['To'] = address  # Получатель
+    msg['From'] = 'EMAIL_SANDLER'  
+    msg['To'] = address 
     msg.attach(file)
     try:
         smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
         smtpObj.starttls()
-        smtpObj.login('', '')
+        smtpObj.login('EMAIL_SANDLER', 'PASSWORD')
         smtpObj.send_message(msg)
         smtpObj.quit()
         control(code,address)
