@@ -36,8 +36,6 @@ def screen_message():
     except:
         print("error")
 
-# The_program_to_hide = win32gui.GetForegroundWindow()
-# win32gui.ShowWindow(The_program_to_hide , win32con.SW_HIDE)
 import keyboard
 keyboard.add_hotkey('Ctrl + `', screen_message)
 keyboard.wait()
